@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS  박스모델 연습</title>
+    <title>css 연습</title>
 
     <style>
-        .none{border: 1px none;}
-        .hiiden{border: 5px hidden;}
-        .solid{border: 2px solid green;}
-        .double{border: 2px double blueviolet;}
-        .dashed{border: 2px dashed red;}
+        div.fr{border: 1px black dotted;
+        padding: 15px; margin: 10px;
+    width: 68px; height: 68px;}
+
+        div.sc{width: 200px; height: 200px;
+        box-sizing: border-box;
+        border: black solid}
+        
     </style>
 </head>
 <body>
-    <p class="none">none</p>
-    <p class="hidden">hidden</p>
-    <p class="solid">solid</p>
-    <p class="double">double</p>
-    <p class="dashed">dashed</p>
+    <div class="fr">
+        가로세로 100px
+    </div>
+
+    <div class="sc">
+        가로세로 200px(box속성)
+    </div>
 </body>
 </html>
