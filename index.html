@@ -7,28 +7,21 @@
 
     <style>
         .box{
-            width: 200px;
-            height: 200px;
             background-color: red;
-            animation-name: bgChange;
-            animation-duration: 3s;
-            animation-delay: 3s;
-            animation-fill-mode: both;
-            animation-iteration-count: 2;
-            animation-direction: alternate;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
         }
-
         .box:hover{
-            animation-play-state: paused;
-        }
-
-        @keyframes bgChange{
-            from{background-color: blue;}
-            50%{background-color: blueviolet;}
-            to{background-color: yellow;}
+            rotate: 20deg;
+            transform-origin: bottom right ;
         }
     </style>
 </head>
+
 <body>
     <div class="box"></div>
 </body>
