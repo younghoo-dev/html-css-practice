@@ -6,21 +6,37 @@
     <title>CSS연습</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .flex-container{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            row-gap: 10px;
+            column-gap: 10px;
+            grid-template-areas: 
+            "header header header"
+            "sidebar content content"
+            "footer footer footer";
+            }
+        #header{
+            grid-area: header;
+        }
+        #sidebar{
+            grid-area: sidebar;
+        }
+        #content{
+            grid-area: content;
+        }
+        #footer{
+            grid-area: footer;
         }
     </style>
 </head>
 <body>
-    <div class="flex-container">
-        <div class="flex-item">item-1</div>
-        <div class="flex-item">item-2</div>
-        <div class="flex-item">item-3</div>
-        <div class="flex-item">item-4</div>
+    <div class="grid-container">
+        <p id="header">Header</p>
+        <p id="sidebar">Sidebar</p>
+        <p id="content">content</p>
+        <p id="footer">foter</p>
     </div>
 </body>
 </html>
