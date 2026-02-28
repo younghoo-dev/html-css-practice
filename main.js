@@ -1,17 +1,26 @@
-var num = 10;
-console.log(num)
+let x = 10;
+let y = 5;
+console.log(x+y);
+console.log(x-y);
+console.log(x*y);
+console.log(x/y);
+console.log(x%y);
+console.log(x**y);
 
-let des = 15;
-console.log(des)
+let ax = ++x;
+console.log(ax);
 
-const name = "Younghoo"
-console.log(`Hello ${name}`)
+let bx = --x;
+console.log(bx);
 
-let string = '문자열은 큰따옴표("")나 작은따옴표(' + "'')로 감싸면 됩니다."
-console.log(string);
+let cx = -x;
+console.log(cx)
 
-let box = 10 > 20;
-console.log(box);
+let z = '10'
 
-let num1 = [90, 88, 89, 95, 96];
-console.log(num1[0]);
+console.log(x==z);
+console.log(x===z);
+
+let score = 90;
+let grade = score >= 90 ? 'A+' : 'B';
+console.log(grade);
