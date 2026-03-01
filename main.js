@@ -1,35 +1,27 @@
-let num = 7
-if(num % 2 === 0){
-    console.log('변수 num에 할당된 숫자는 짝수입니다.');
-}
-else{
-    console.log('변수 num에 할당된 숫자는 홀수입니다.');
+num = 1;
+while(num <= 10){
+    console.log(num);
+    num++;
 }
 
-let score = 79
-if(score > 90 && score <= 100){
-    console.log('A+')
+do{
+    console.log('무조건')
+    console.log('한 번은 실행')
+}while(false);
+
+for(let a = 1; a <= 2; a++){
+    console.log(`a= ${a}`);
+    for(let b = 1; b < 4; b++){
+        console.log(`b= ${b}`)
+    }
 }
-else if(score <= 90 && score >80){
-    console.log('B+')
+
+const arr = ['apple','banana', 'orange']
+for(let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
 }
-else{
-    console.log('바보')
-}
 
-
-let food = 'carrot'
-switch(food){
-    case 'melon':
-    case 'apple':
-    case 'banana':
-        console.log('fruit');
-        break
-
-    case 'carrot':
-        console.log('vegetable')
-        break
-
-    default:
-        console.log("It's not a fruit and vegetable.")
+for(let c = 1; c < 12; c++){
+    if(c % 2 === 0) continue
+    console.log(c)
 }
