@@ -1,5 +1,5 @@
-let sum = 0
-for(let i = 1; i <= 100; i++){
-    sum = sum + i
+for(i = 1; i < 10; i++){
+    for(k = 1; k < 10; k++){
+        console.log(`${i} x ${k} = ${i*k}`);
+    }
 }
-console.log(sum);
