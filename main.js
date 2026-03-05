@@ -1,33 +1,24 @@
-/*function gugudan(){//함수 시작
-for(let i = 1; i<=9; i++){
-    console.log(`3 x ${i} = ${3 * i}`);
+//let이나 const에 한해서만 블록문 안에서 스코프가 달라진다.
+
+/*
+{
+    let a = 10;
+    console.log(`블록문 내부에서 변수 a : ${a}`);
 }
-} //함수 끝
+console.log(`블록문 외부에서 변수 a : ${a}`)
+*/
 
-gugudan();
 
-
-const gugudan5 = () => {
-    for(let i = 1; i <=9; i++){
-        console.log(`5 x ${i} = ${5 * i}`);
-    }
+//var는 블록문 상관없이 스코프가 달라지지 않는다
+{
+    var b = 10;
+    console.log(`블록문 내부에서 변수 b : ${b}`);
 }
-gugudan5();
+console.log(`블록문 외부에서 변수 b : ${b}`);
 
 
-const gugudanx = (wow) => {
-    for(let i = 1; i <=9; i++){
-        console.log(`${wow} x ${i} = ${wow * i}`);
-    }
-}
-gugudanx(7);*/
-
-
-function sum(num1, num2){
-    const result = num1 + num2
-    return result
-}
-const result1 = sum(10, 20);
-const result2 = sum(30, 40);
-
-console.log(result1 + result2);
+//즉시 실행 함수
+(function init(){
+    let a = 10
+    console.log(a)
+})();
