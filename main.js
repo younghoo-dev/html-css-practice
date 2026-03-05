@@ -1,24 +1,49 @@
-//let이나 const에 한해서만 블록문 안에서 스코프가 달라진다.
-
-/*
-{
-    let a = 10;
-    console.log(`블록문 내부에서 변수 a : ${a}`);
-}
-console.log(`블록문 외부에서 변수 a : ${a}`)
-*/
-
-
-//var는 블록문 상관없이 스코프가 달라지지 않는다
-{
-    var b = 10;
-    console.log(`블록문 내부에서 변수 b : ${b}`);
-}
-console.log(`블록문 외부에서 변수 b : ${b}`);
+const person = {
+    name: 'YHoo',
+    age: 20,
+    'phone number': '010-6806-7455',
+    printInfo: function(msg) {
+        console.log(msg);
+    },
+};
+console.log(person.name);
+console.log(person['age']);
+console.log(person['phone number'])
+person.printInfo('hello');
 
 
-//즉시 실행 함수
-(function init(){
-    let a = 10
-    console.log(a)
-})();
+//객체 속성 수정하기
+
+person.name = '철수';
+console.log(person.name);
+
+
+
+//객체 속성 추가하기/삭제하기
+
+const human = {};
+human.name = 'Jjang';
+human.age = 22;
+
+delete human.age;
+console.log(human);
+
+
+
+//깊은 복사와 얕은 복사
+
+let num1 = 10;
+let num2 = num1;
+
+num1 = 30;
+console.log(num1, num2);
+
+
+
+const obj1 = {
+    name: 'Wow',
+};
+const obj2 = obj1;
+
+delete obj1.name;
+console.log(obj1, obj2);
