@@ -1,49 +1,44 @@
-const person = {
-    name: 'YHoo',
-    age: 20,
-    'phone number': '010-6806-7455',
-    printInfo: function(msg) {
-        console.log(msg);
-    },
+const str = 'abcdefgkslf;jlksdj;f. s;dofj';
+console.log(str.length);
+
+
+const email = 'testgmail.com';
+if(email.includes('@') === false){
+    console.log('@가 없습니다.');
 };
-console.log(person.name);
-console.log(person['age']);
-console.log(person['phone number'])
-person.printInfo('hello');
 
 
-//객체 속성 수정하기
-
-person.name = '철수';
-console.log(person.name);
+const Email = 'test@naver.com';
+console.log(Email.indexOf('a'));
 
 
+const arr = ['a', 'b', 'c'];
+arr.pop();
+console.log(arr);
 
-//객체 속성 추가하기/삭제하기
-
-const human = {};
-human.name = 'Jjang';
-human.age = 22;
-
-delete human.age;
-console.log(human);
+const arr1 = ['a', 'b', 'c'];
+arr1.push('d');
+console.log(arr1);
 
 
+const arr2 = ['a', 'b', 'c'];
+arr2.forEach(function(v){
+    console.log(v);
+});
 
-//깊은 복사와 얕은 복사
 
-let num1 = 10;
-let num2 = num1;
-
-num1 = 30;
-console.log(num1, num2);
+const date = new Date();
+console.log(date.getFullYear());
 
 
 
-const obj1 = {
-    name: 'Wow',
-};
-const obj2 = obj1;
+const ran = Math.random();
+console.log(ran);
+//0부터 1 사이의 무작위 수 구하기
 
-delete obj1.name;
-console.log(obj1, obj2);
+
+
+const random = Math.random() * 20;
+console.log(Math.floor(random));
+//0부터 19 까지의 임의의 정수 구하기
+
