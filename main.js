@@ -1,5 +1,0 @@
-alert('안녕')
-confirm('계속하시겠습니까?')
-prompt('이름을 입력하세요:')
-open('https://www.naver.com')
-close('https://www.naver.com')
