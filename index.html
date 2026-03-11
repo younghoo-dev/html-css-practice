@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>노드 조작하기</title>
+    <title>Document</title>
+    <style>
+        .styleSet7 {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-    <p id="title">Hello, <span style="display: none;">JavaScript!!</span></p>
+    <p id="text">text</p>
+    <p class="text1">text1</p>
     <script>
-        const e1 = document.querySelector("p")
-        console.log(e1.textContent)
-        console.log(e1.innerText)
-        console.log(e1.innerHTML)
+        const e1 = document.querySelector("#text")
+        e1.style.color = 'white';
+        e1.style.backgroundColor = 'blue';
+        e1.style.fontSize = '35px';
+
+        const e2 = document.querySelector('.text1');
+        e2.classList.add('styleSet7')
     </script>
 </body>
 </html>
