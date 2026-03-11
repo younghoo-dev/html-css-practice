@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .styleSet7 {
-            background-color: red;
-            color: white;
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
-    <p id="text">text</p>
-    <p class="text1">text1</p>
+    <h1>text</h1>
     <script>
-        const e1 = document.querySelector("#text")
-        e1.style.color = 'white';
-        e1.style.backgroundColor = 'blue';
-        e1.style.fontSize = '35px';
+        
+        //노드 추가하기
+        const e1 = document.createElement("a");
+        const textNode = document.createTextNode("link");
+        const att = document.createAttribute("href");
 
-        const e2 = document.querySelector('.text1');
-        e2.classList.add('styleSet7')
+        document.body.appendChild(e1);
+        e1.appendChild(textNode);
+        att.value = 'http://www.naver.com'
+        e1.setAttributeNode(att);
+
+        //노드 삭제하기
+        const e2 = document.querySelector('h1');
+        e2.parentNode.removeChild(e2);
     </script>
 </body>
 </html>
