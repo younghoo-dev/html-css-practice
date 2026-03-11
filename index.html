@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>forms</title>
 </head>
 <body>
-    <h1>text</h1>
+    <form>
+        <input type="text">
+    </form>
+    <form>
+        <input type="text">
+    </form>
+    <form>
+        <input type="text">
+    </form>
+    <form name="wow">
+        <input type="date">
+    </form>
+
     <script>
+        const fEl = document.forms;
+        console.log(fEl);
         
-        //노드 추가하기
-        const e1 = document.createElement("a");
-        const textNode = document.createTextNode("link");
-        const att = document.createAttribute("href");
-
-        document.body.appendChild(e1);
-        e1.appendChild(textNode);
-        att.value = 'http://www.naver.com'
-        e1.setAttributeNode(att);
-
-        //노드 삭제하기
-        const e2 = document.querySelector('h1');
-        e2.parentNode.removeChild(e2);
+        const fEl1 = document.wow;
+        console.log(fEl1);
     </script>
 </body>
 </html>
